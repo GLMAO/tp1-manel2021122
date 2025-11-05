@@ -22,18 +22,22 @@ public class CompteARebours implements TimerChangeListener{
     }
 
     public void afficherCompte () {
-        if (timerService != null && cpt >= 0){
+        if (timerService != null && cpt >= 0)
             System.out.println (name + " affiche " + 
                                 cpt + " secondes restantes") ;
-            cpt-- ;
-        }
-        else
-            this.arreter();
     }
 
     @Override
     public void propertyChange(String prop, Object oldValue, Object newValue) {
+        if(cpt >= 0) {
             afficherCompte();
+            if(cpt == 0) {
+                this.arreter();
+            }
+            else {
+                cpt--;  
+            }
+        }
     }
 
     public void arreter() {

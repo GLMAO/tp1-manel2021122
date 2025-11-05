@@ -13,8 +13,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        //testDuTimeService();
-        Decompeuteur();
+        testDuTimeService();
+        //Decompeuteur();
     }
 
     private static void testDuTimeService() {
@@ -26,6 +26,12 @@ public class App {
     private static void Decompeuteur() {
         TimerService timerService = new DummyTimeServiceImpl() ;   
         CompteARebours c1 = new CompteARebours("C1", 5, timerService);
+        //10 compteurs
+        java.util.Random rand = new java.util.Random();
+        for (int i = 0; i < 10; i++) {
+            int valeur = 10 + rand.nextInt(11); // 10-20
+            new CompteARebours("C" + (i+2), valeur, timerService);
+        }
 
     }
     public static void clearScreen() {
