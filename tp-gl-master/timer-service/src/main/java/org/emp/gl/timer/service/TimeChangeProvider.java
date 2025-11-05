@@ -5,13 +5,14 @@
  */
 package org.emp.gl.timer.service;
 
+import java.beans.PropertyChangeListener;
 /**
  *
  * @author tina
  */
 public interface TimeChangeProvider {
 
-    public void addTimeChangeListener(TimerChangeListener pl);
+    public void addTimeChangeListener(PropertyChangeListener pl);
 
-    public void removeTimeChangeListener(TimerChangeListener pl);
+    public void removeTimeChangeListener(PropertyChangeListener pl);
 }

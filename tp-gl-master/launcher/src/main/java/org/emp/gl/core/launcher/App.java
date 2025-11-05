@@ -13,8 +13,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        testDuTimeService();
-        //Decompeuteur();
+        //testDuTimeService();
+        Decompeuteur();
     }
 
     private static void testDuTimeService() {
