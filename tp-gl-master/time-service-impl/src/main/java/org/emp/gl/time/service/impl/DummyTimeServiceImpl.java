@@ -42,7 +42,7 @@ public class DummyTimeServiceImpl
                 timeChanged();
             }
         };
-        timer.scheduleAtFixedRate(task, 100, 100);
+        timer.scheduleAtFixedRate(task, 1000, 1000);
     }
 
     private void setTimeValues() {

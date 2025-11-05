@@ -9,11 +9,6 @@
     <artifactId>timer-service-client</artifactId>
     <packaging>jar</packaging>
     <dependencies>
-         <dependency>
-            <groupId>org.emp.gl</groupId>
-            <artifactId>timer-service</artifactId>
-            <version>0.0.1</version>
-        </dependency>
         <dependency>
             <artifactId>timer-service</artifactId>
             <groupId>org.emp.gl</groupId>
